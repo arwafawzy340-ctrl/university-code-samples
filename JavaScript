@@ -1,0 +1,171 @@
+
+// Run after page loads
+document.addEventListener("DOMContentLoaded", function () {
+
+  // Show Date
+
+  let dateElement = document.getElementById("date");
+  if (dateElement) {
+    let today = new Date();
+    dateElement.innerHTML = today.toDateString();
+  }
+
+  // Email Form (Footer)
+  
+  let emailForm = document.getElementById("emailForm");
+
+  if (emailForm) {
+    emailForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      let emailInput = document.getElementById("emailInput");
+
+      if (!emailInput || emailInput.value.trim() === "") {
+        alert("Please enter your email");
+        return;
+      }
+
+      alert("Email sent successfully ");
+      emailForm.reset();
+    });
+  }
+
+  
+  //  Contact Form (Main)
+  
+  let contactForm = document.getElementById("contactForm");
+
+  if (contactForm) {
+    contactForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      let name = document.getElementById("name");
+      let email = document.getElementById("email");
+      let message = document.getElementById("message");
+
+      if (!name || name.value.trim() === "") {
+        alert("Please enter your name");
+        return;
+      }
+
+      if (!email || email.value.trim() === "") {
+        alert("Please enter your email");
+        return;
+      }
+
+      if (!message || message.value.trim() === "") {
+        alert("Please enter your message");
+        return;
+      }
+
+      alert("Message sent successfully ");
+      contactForm.reset();
+    });
+  }
+
+});
+
+
+
+// General Functions (Reusable)
+
+
+// Show any message
+function showMessage(msg) {
+  alert(msg);
+}
+
+// Confirm action (like delete)
+function confirmAction() {
+  return confirm("Are you sure?");
+}
+
+// Welcome alert
+function showWelcome() {
+  alert("Welcome to our website ");
+}
+// Run after page loads
+document.addEventListener("DOMContentLoaded", function () {
+
+  // Show Date
+
+  let dateElement = document.getElementById("date");
+  if (dateElement) {
+    let today = new Date();
+    dateElement.innerHTML = today.toDateString();
+  }
+
+  // Email Form (Footer)
+  
+  let emailForm = document.getElementById("emailForm");
+
+  if (emailForm) {
+    emailForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      let emailInput = document.getElementById("emailInput");
+
+      if (!emailInput || emailInput.value.trim() === "") {
+        alert("Please enter your email");
+        return;
+      }
+
+      alert("Email sent successfully ");
+      emailForm.reset();
+    });
+  }
+
+  
+  //  Contact Form (Main)
+  
+  let contactForm = document.getElementById("contactForm");
+
+  if (contactForm) {
+    contactForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      let name = document.getElementById("name");
+      let email = document.getElementById("email");
+      let message = document.getElementById("message");
+
+      if (!name || name.value.trim() === "") {
+        alert("Please enter your name");
+        return;
+      }
+
+      if (!email || email.value.trim() === "") {
+        alert("Please enter your email");
+        return;
+      }
+
+      if (!message || message.value.trim() === "") {
+        alert("Please enter your message");
+        return;
+      }
+
+      alert("Message sent successfully ");
+      contactForm.reset();
+    });
+  }
+
+});
+
+
+
+// General Functions (Reusable)
+
+
+// Show any message
+function showMessage(msg) {
+  alert(msg);
+}
+
+// Confirm action (like delete)
+function confirmAction() {
+  return confirm("Are you sure?");
+}
+
+// Welcome alert
+function showWelcome() {
+  alert("Welcome to our website ");
+}
