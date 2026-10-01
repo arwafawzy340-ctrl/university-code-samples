@@ -1,0 +1,80 @@
+public class SalariedEmployee extends Employee {
+  protected double bonus;
+  protected double deduction;
+
+  // Constructor
+  public SalariedEmployee() {
+    super();
+  }
+
+  public SalariedEmployee(String name, String email, double salary, String rank, double bonus, double deduction) {
+    super(name, email, salary, rank);
+    this.bonus = bonus;
+    this.deduction = deduction;
+  }
+
+  // Getters
+  public double getBonus() {
+    return bonus;
+  }
+
+  public double getDeduction() {
+    return deduction;
+  }
+
+  // Setters
+  public void setBonus(double bonus) {
+    this.bonus = bonus;
+  }
+
+  public void setDeduction(double deduction) {
+    this.deduction = deduction;
+  }
+
+  // Override getSalary
+  @Override
+  public double getSalary() {
+    return salary + bonus - deduction;
+  }
+}
+
+
+public class HourlyEmployee extends Employee {
+  protected double workingHours;
+  protected double hourRate;
+
+  // Constructor
+  public HourlyEmployee() {
+  
+  }
+
+  public HourlyEmployee(String name, String email, double salary, String rank, double workingHours, double hourRate) {
+    super(name, email, salary, rank);
+    this.workingHours = workingHours;
+    this.hourRate = hourRate;
+  }
+
+  // Getters
+  public double getWorkingHours() {
+    return workingHours;
+  }
+
+  public double getHourRate() {
+    return hourRate;
+  }
+
+  // Setters
+  public void setWorkingHours(double workingHours) {
+    this.workingHours = workingHours;
+  }
+
+  public void setHourRate(double hourRate) {
+    this.hourRate = hourRate;
+  }
+
+  // Override getSalary
+  @Override
+  public double getSalary() {
+    return workingHours * hourRate;
+  }
+}
